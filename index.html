@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guesser</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="game-card">
+            <div class="header">
+                <h1>Number Guesser</h1>
+                <p class="tagline">Guess the number between <span id="min-num">1</span> and <span id="max-num">100</span></p>
+            </div>
+            
+            <div class="game-section">
+                <div class="input-group">
+                    <input type="number" id="guess-input" placeholder="Enter your guess...">
+                    <button id="guess-btn">Guess</button>
+                </div>
+                
+                <div class="feedback">
+                    <p id="message"></p>
+                    <div class="game-info">
+                        <p>Attempts: <span id="attempts">0</span></p>
+                        <p>Previous Guesses: <span id="previous-guesses"></span></p>
+                    </div>
+                </div>
+                
+                <div class="range-indicator">
+                    <div class="range-bar">
+                        <div class="progress" id="progress-bar"></div>
+                    </div>
+                    <div class="range-labels">
+                        <span id="range-min">1</span>
+                        <span id="range-max">100</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="controls">
+                <button id="reset-btn">New Game</button>
+                <div class="difficulty">
+                    <label for="difficulty-select">Difficulty:</label>
+                    <select id="difficulty-select">
+                        <option value="easy">Easy (1-50)</option>
+                        <option value="medium" selected>Medium (1-100)</option>
+                        <option value="hard">Hard (1-200)</option>
+                        <option value="expert">Expert (1-500)</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
